@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@import "@heroui/styles";
+@import "@fontsource/ibm-plex-sans/latin-400.css";
+@import "@fontsource/ibm-plex-sans/latin-500.css";
+@import "@fontsource/ibm-plex-sans/latin-600.css";
+
+/* Brand tokens from https://www.hams.ai/; layout stays in Tailwind utilities. */
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: #f3f4f6;
+    --foreground: #030201;
+    --surface: #ffffff;
+    --muted: #44464b;
+    --accent: #030201;
+    --accent-foreground: #ffffff;
+    --accent-hover: #1a1a1f;
+    --focus: #1a1a1f;
+    --border: #e2e2e2;
+    --separator: #f0f0f0;
+  }
+}
