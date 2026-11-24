@@ -9,7 +9,6 @@ uses HeroUI v3, Tailwind CSS, and Phosphor icons.
 ## Demo
 
 [Open the live app](https://hams-ai-conversation-monitor-production.up.railway.app/).
-The [walkthrough script](DEMO-SCRIPT.md) covers a 2–3 minute recording.
 
 The frontend and unchanged mock run as separate Railway services from this
 repository. Railway builds the frontend with `npm run build` and serves `dist`.
