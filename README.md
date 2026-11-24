@@ -6,6 +6,21 @@ replies as they stream, and taking over when human help is needed.
 Built with Vite, TanStack Query, Zustand, Zod, and TanStack Virtual. The interface
 uses HeroUI v3, Tailwind CSS, and Phosphor icons.
 
+## Demo
+
+[Open the live app](https://hams-ai-conversation-monitor-production.up.railway.app/).
+The [walkthrough script](DEMO-SCRIPT.md) covers a 2–3 minute recording.
+
+The frontend and unchanged mock run as separate Railway services from this
+repository. Railway builds the frontend with `npm run build` and serves `dist`.
+Its `VITE_API_BASE_URL` points to
+`https://hams-ai-mock-api-production.up.railway.app`. The backend runs
+`node mock-server.mjs` with one instance and `/conversations` as its health check.
+
+Demo data is shared between visitors and resets when the mock restarts. Hosting
+currently uses Railway's limited trial, so availability depends on its remaining
+time and credit. The local setup below works independently of the hosted demo.
+
 ## Run locally
 
 Use Node 22.12 or newer and npm. The project was developed with Node 24.12.0,
@@ -156,8 +171,8 @@ serves the production app at http://127.0.0.1:4173; keep the mock running.
 
 ## What was skipped
 
-All seven required features are implemented. The optional hosted demo and
-walkthrough recording are not included.
+All seven required features are implemented. The hosted demo is available above;
+the optional walkthrough recording is not included yet.
 
 ## What I would improve with more time
 

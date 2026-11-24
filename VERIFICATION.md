@@ -1,5 +1,24 @@
 # Phase 6 verification
 
+## Hosted demo verification — 24 November 2026
+
+Deployed the frontend and unchanged mock as separate Railway services from
+commit `386c70f`. The public frontend loaded the inbox and live messages using
+the HTTPS API. HTML, JavaScript, CSS, logo and favicons returned HTTP 200, and
+the built JavaScript contained the hosted API URL without a localhost fallback.
+
+Read-only API checks returned eight conversations and 5,004 messages for `c-1`,
+with no duplicate IDs. The SSE stream delivered tokens, message starts/ends,
+handoffs and status updates. Reconnecting with `since=525` replayed IDs 523–525,
+then continued through 622 without gaps; overlapping payloads matched.
+
+In Chrome, takeover enabled Noura's composer. Sending a mixed English/Arabic
+reply received a real rejection and displayed the failed bubble with inline
+Retry. Retrying confirmed the reply; a subsequent GET found exactly one matching
+human message (`m-5274`). Arabic layout rendered correctly, Sara's thread loaded
+5,016 messages, and live updates continued after an observed connection loss.
+These are deployment smoke checks, not a new full browser regression run.
+
 ## Browser retry verification — 24 November 2026
 
 Verified in the running Chrome app using the unchanged mock server. The sixth
